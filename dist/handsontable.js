@@ -29,7 +29,7 @@
  * FROM USE OR INABILITY TO USE THIS SOFTWARE.
  * 
  * Version: 9.0.1
- * Release date: 17/06/2021 (built at 13/09/2021 14:11:03)
+ * Release date: 17/06/2021 (built at 02/03/2022 21:59:40)
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -41342,7 +41342,7 @@ Handsontable.Core = function (rootElement) {
 };
 
 Handsontable.packageName = 'handsontable';
-Handsontable.buildDate = "13/09/2021 14:11:03";
+Handsontable.buildDate = "02/03/2022 21:59:40";
 Handsontable.version = "9.0.1";
 Handsontable.languages = {
   dictionaryKeys: _registry.dictionaryKeys,
@@ -67061,7 +67061,7 @@ var Comments = /*#__PURE__*/function (_BasePlugin) {
   }, {
     key: "targetIsCellWithComment",
     value: function targetIsCellWithComment(event) {
-      var closestCell = (0, _element.closest)(event.target, 'TD', 'TBODY');
+      var closestCell = (0, _element.closest)(event.target, ['TD'], 'TBODY');
       return !!(closestCell && (0, _element.hasClass)(closestCell, 'htCommentCell') && (0, _element.closest)(closestCell, [this.hot.rootElement]));
     }
     /**
@@ -67408,7 +67408,7 @@ var Comments = /*#__PURE__*/function (_BasePlugin) {
       }
 
       if (!this.contextMenuEvent && !this.targetIsCommentTextArea(event)) {
-        var eventCell = (0, _element.closest)(event.target, 'TD', 'TBODY');
+        var eventCell = (0, _element.closest)(event.target, ['TD'], 'TBODY');
         var coordinates = null;
 
         if (eventCell) {
